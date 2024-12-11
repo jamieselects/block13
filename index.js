@@ -6,7 +6,11 @@
  * @returns {number} temperature in °C
  */
 function convertToCelsius(f) {
-  // TODO
+  console.log(`The degrees in fahrenheit to convert is ${f}.`);
+  //convert f to c in degrees and store as degreesCelsius
+  let degreesCelsius = (f - 32) * (5/9); 
+  console.log("In celsius, that is", degreesCelsius, "degrees.");
+  return degreesCelsius;
 }
 
 /**
@@ -23,7 +27,21 @@ function convertToCelsius(f) {
  * the given Fahrenheit temperature `f`
  */
 function describeTemperature(f) {
-  // TODO
+  //create an editable variable that will contain the temp description
+  let tempDescription = "";
+  //if statement logic
+  if (f < 32) {
+    tempDescription = "very cold";
+  } else if (f > 32, f < 64) {
+    tempDescription = "cold"
+  } else if (f > 64, f < 86) {
+    tempDescription = "warm"
+  } else if (f > 87, f < 100) {
+    tempDescription = "hot"
+  } else if (f >= 100) {
+    tempDescription = "very hot"
+  }
+  return tempDescription;
 }
 
 /**
@@ -31,7 +49,11 @@ function describeTemperature(f) {
  * @returns {number} a random integer in the range [0, `limit`)
  */
 function getRandomInt(limit) {
-  // TODO
+  //create a random number
+  const randomNumber = Math.round(Math.random() * limit);
+  //log the random number in console
+  console.log("the random number is", randomNumber);
+  return randomNumber;
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
